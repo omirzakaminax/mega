@@ -8,6 +8,7 @@ header {
     background-color: #333;
     color: white;
     padding: 1em 0;
+    animation: slide-down 1s ease-out;
 }
 
 nav ul {
@@ -27,9 +28,70 @@ nav ul li a {
     text-decoration: none;
 }
 
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    animation: fade 1s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
 section {
     padding: 2em 1em;
     text-align: center;
+    animation: fade-in 2s ease-in;
+}
+
+.store-list, .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.store-item, .event-item {
+    max-width: 300px;
+    text-align: center;
+    opacity: 0;
+    animation: fade-in-up 1.5s forwards;
+}
+
+.store-item img {
+    width: 100%;
 }
 
 footer {
@@ -37,6 +99,7 @@ footer {
     color: white;
     padding: 1em 0;
     text-align: center;
+    animation: slide-up 1s ease-in;
 }
 
 form input, form textarea, form button {
@@ -54,4 +117,91 @@ form button {
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ccc;
+}
+
+/* Animations */
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-down {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .carousel-control {
+        padding: 10px;
+    }
+
+    .store-list, .event-list {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .store-item, .event-item {
+        max-width: 100%;
+    }
+
+    form input, form textarea, form button {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .carousel-control {
+        padding: 8px;
+    }
+
+    form input, form textarea, form button {
+        padding: 0.4em;
+    }
 }
