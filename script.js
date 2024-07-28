@@ -39,7 +39,7 @@ function validateForm() {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
 });   */
-
+/*
 $(document).ready(function(){
     $('.carousel').slick({
         infinite: true,
@@ -49,4 +49,4 @@ $(document).ready(function(){
         arrows: true,
     });
 });
-
+*/
