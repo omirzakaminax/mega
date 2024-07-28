@@ -242,11 +242,12 @@ form button:hover {
         padding: 0.4em;
     }
 } */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f0f8ff;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -259,6 +260,7 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -273,6 +275,7 @@ nav ul li a {
 
 section {
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -299,7 +302,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }

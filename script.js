@@ -45,8 +45,7 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        autoplay: false,
         arrows: true,
     });
 });
