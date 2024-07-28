@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Mall</title>
+    <title>Наш ТРЦ</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 <body>
     <header>
@@ -23,7 +24,7 @@
     <section id="home">
         <div class="carousel fade">
             <div class="carousel-item active">
-                <img src="image1.jpg" alt="Image 1">
+                <img src="image1.jpg" alt="Hall">
             </div>
             <div class="carousel-item">
                 <img src="image2.jpg" alt="Image 2">
@@ -34,46 +35,224 @@
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
         </div>
-        <h1>Welcome to My Mall</h1>
+        <h1>Welcome to Mega MIlky Way</h1>
         <p>Discover the best shopping experience.</p>
     </section>
     
+
     <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about our mall.</p>
+        <h2>О нас</h2>
+        <p>Добро пожаловать в наш торгово-развлекательный центр, где вы найдете разнообразные магазины, фудкорты и развлекательные опции для всей семьи.</p>
     </section>
-    
+        
+    <section id="hours">
+        <h2>Часы работы</h2>
+        <p>Мы открыты каждый день недели для вашего удобства. Наши часы работы:</p>
+        <ul>
+            <li>Понедельник - Пятница: 10:00 - 22:00</li>
+            <li>Суббота: 10:00 - 23:00</li>
+            <li>Воскресенье: 11:00 - 21:00</li>
+        </ul>
+    </section>        
     <section id="stores">
-        <h2>Stores</h2>
-        <div class="store-list">
+        <h2>Магазины</h2>    
+            <div class="store-list">
             <div class="store-item fade-in">
-                <img src="store1.jpg" alt="Store 1">
-                <h3>Store 1</h3>
-                <p>Store 1 description.</p>
+                <img src="zara.jpg" alt="Zara">
+                <h3>Zara</h3>
+                <p>Zara предлагает последние тренды в одежде для женщин, мужчин и детей. Вы найдете стильные и современные вещи, которые подойдут как для повседневной носки, так и для особых случаев. Наши коллекции обновляются каждую неделю, чтобы вы всегда могли быть в курсе новинок моды.</p>
             </div>
             <div class="store-item fade-in">
-                <img src="store2.jpg" alt="Store 2">
-                <h3>Store 2</h3>
-                <p>Store 2 description.</p>
+                <img src="hm.jpg" alt="H&M">
+                <h3>H&M</h3>
+                <p>H&M предоставляет моду и качество по лучшей цене устойчивым образом. Мы предлагаем широкий ассортимент одежды для всей семьи, включая модные аксессуары и обувь. Наши коллекции ориентированы на все возрастные группы и стили, от классики до самых современных трендов.</p>
             </div>
-            <!-- Add more store items as needed -->
+            <div class="store-item fade-in">
+                <img src="lcwaikiki.jpg" alt="LC Waikiki">
+                <h3>LC Waikiki</h3>
+                <p>LC Waikiki предлагает доступную моду для всех с широким ассортиментом продукции. В нашем магазине вы найдете одежду для женщин, мужчин и детей, а также множество аксессуаров и обуви. Мы стремимся сделать моду доступной для каждого, сохраняя высокое качество продукции.</p>
+            </div>
+            <div class="store-item fade-in">
+                <img src="bershka.jpg" alt="Bershka">
+                <h3>Bershka</h3>
+                <p>Bershka предлагает молодежный и современный стиль для модных людей. В нашем ассортименте - яркие и стильные вещи, которые помогут вам выделиться из толпы. Мы следим за последними трендами и предлагаем нашим клиентам только самое актуальное.</p>
+            </div>
+            <div class="store-item fade-in">
+                <img src="prada.jpg" alt="Prada">
+                <h3>Prada</h3>
+                <p>Prada известна своими инновационными дизайнами и роскошными продуктами. В нашем магазине вы найдете высококачественную одежду, аксессуары и обувь, которые подчеркнут ваш стиль и статус. Prada - это сочетание элегантности и современности в каждой детали.</p>
+            </div>
+            <div class="store-item fade-in">
+                <img src="louisvuitton.jpg" alt="Louis Vuitton">
+                <h3>Louis Vuitton</h3>
+                <p>Louis Vuitton предлагает знаковые предметы роскоши, которые являются вечными и элегантными. В нашем ассортименте - сумки, одежда, обувь и аксессуары, выполненные из самых качественных материалов. Каждое изделие Louis Vuitton - это образец изысканности и безупречного вкуса.</p>
+            </div>
+                <div class="store-item fade-in">
+                <img src="goldapple.jpg" alt="Золотое Яблоко">
+                <h3>Золотое Яблоко</h3>
+                <p>Золотое Яблоко предлагает широкий выбор косметики и парфюмерии от ведущих брендов. В нашем магазине вы найдете все, что нужно для ухода за собой: от декоративной косметики до средств для ухода за кожей и волосами. Мы предлагаем только самые лучшие и проверенные бренды.</p>
+            </div>
+                <!-- Добавьте больше магазинов по мере необходимости -->
         </div>
     </section>
-    
-    <section id="events">
-        <h2>Events</h2>
-        <div class="event-list">
-            <div class="event-item slide-in">
-                <h3>Event 1</h3>
-                <p>Event 1 description.</p>
+        
+       <section id="food-courts">
+            <h2>Фудкорты</h2>
+            <div class="food-court-list">
+                <div class="food-court-item fade-in">
+                    <img src="galmart.jpg" alt="Galmart">
+                    <h3>Galmart</h3>
+                    <p>Galmart предлагает разнообразные свежие и вкусные блюда, идеально подходящие для быстрого перекуса. У нас вы найдете широкий ассортимент блюд от салатов до горячих блюд, приготовленных из свежих ингредиентов. Galmart - это идеальное место для тех, кто ценит качество и вкус.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="kfc.jpg" alt="KFC">
+                    <h3>KFC</h3>
+                    <p>Наслаждайтесь знаменитым жареным курицей и другими вкусными блюдами в KFC. Мы предлагаем широкий выбор блюд, включая бургеры, картофель фри и освежающие напитки. Наше фирменное блюдо - хрустящая курица, приготовленная по секретному рецепту, который остается неизменным на протяжении десятилетий.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="salambro.jpg" alt="Salam Bro">
+                    <h3>Salam Bro</h3>
+                    <p>Salam Bro предлагает вкусный халяльный фастфуд с разнообразными опциями. У нас вы найдете как традиционные блюда, так и новые вкусовые сочетания, которые придутся по душе каждому. Salam Bro - это место, где каждая трапеза становится настоящим удовольствием.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="im.jpg" alt="I'm">
+                    <h3>I'm</h3>
+                    <p>I'm предлагает выбор здоровых и вкусных блюд на любой вкус. Мы специализируемся на свежих и полезных ингредиентах, предлагая широкий ассортимент блюд от салатов до горячих блюд. В I'm вы всегда найдете что-то вкусное и полезное для вашего организма.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="hardees.jpg" alt="Hardees">
+                    <h3>Hardees</h3>
+                    <p>Hardees предлагает сочные бургеры и другие вкусные фастфуд-блюда. Наши бургеры готовятся из самых качественных ингредиентов, чтобы вы могли наслаждаться настоящим вкусом. В Hardees каждый найдет что-то по вкусу, от классических бургеров до новых, уникальных предложений.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="burgerking.jpg" alt="Burger King">
+                    <h3>Burger King</h3>
+                    <p>Наслаждайтесь классическим Whopper и другими любимыми блюдами в Burger King. Мы предлагаем широкий ассортимент бургеров, закусок и напитков, приготовленных по оригинальным рецептам. В Burger King каждый визит станет настоящим праздником вкуса.</p>
+                </div>
+                <div class="food-court-item fade-in">
+                    <img src="bobatea.jpg" alt="Boba Tea">
+                    <h3>Boba Tea</h3>
+                    <p>Boba Tea предлагает разнообразие пузырьковых чаев с уникальными вкусами и топпингами. У нас вы найдете как классические, так и экспериментальные вкусы, которые порадуют даже самых требовательных гурманов. Boba Tea - это идеальное место для тех, кто хочет попробовать что-то новое и необычное.</p>
+                </div>
+                <!-- Добавьте больше фудкортов по мере необходимости -->
             </div>
-            <div class="event-item slide-in">
-                <h3>Event 2</h3>
-                <p>Event 2 description.</p>
+        </section>
+        
+        <section id="entertainment">
+            <h2>Развлечения</h2>
+            <div class="entertainment-list">
+                <div class="entertainment-item fade-in">
+                    <img src="cinema.jpg" alt="Кинотеатр">
+                    <h3>Кинотеатр</h3>
+                    <p>Посетите наш современный кинотеатр, где вы сможете наслаждаться новейшими фильмами в комфорте. Мы предлагаем удобные сиденья, широкий ассортимент закусок и напитков, а также регулярные акции и специальные предложения.</p>
+                </div>
+                <div class="entertainment-item fade-in">
+                    <img src="arcade.jpg" alt="Аркада">
+                    <h3>Аркада</h3>
+                    <p>Развлекайтесь с разнообразными аркадными играми для всех возрастов. У нас вы найдете как классические игры, так и новейшие аркадные автоматы, которые будут интересны как детям, так и взрослым. Аркада - это место, где можно весело провести время и испытать свои навыки.</p>
+                </div>
+                <div class="entertainment-item fade-in">
+                    <img src="bowling.jpg" alt="Боулинг">
+                    <h3>Боулинг</h3>
+                    <p>Наслаждайтесь игрой в боулинг с друзьями и семьей. Наш боулинг-клуб предлагает современные дорожки и оборудование, уютную атмосферу и разнообразные напитки и закуски. Проведите время весело и активно, соревнуясь за звание лучшего игрока!</p>
+                </div>
+                <div class="entertainment-item fade-in">
+                    <img src="playarea.jpg" alt="Игровая зона для детей">
+                    <h3>Игровая зона для детей</h3>
+                    <p>Безопасная и веселая среда для детей для игры и исследования. У нас есть разнообразные аттракционы, игрушки и игровые зоны, где дети могут весело проводить время под присмотром квалифицированных аниматоров. Игровая зона - это место, где дети могут активно проводить время и развиваться.</p>
+                </div>
+                <div class="entertainment-item fade-in">
+                    <img src="vr.jpg" alt="VR-зона">
+                    <h3>VR-зона</h3>
+                    <p>Испытайте новейшие виртуальные реальности и игры. В нашей VR-зоне вы сможете погрузиться в мир виртуальной реальности, испытать захватывающие приключения и новые ощущения. Мы предлагаем широкий выбор игр и симуляторов, которые подойдут как для новичков, так и для опытных пользователей.</p>
+                </div>
+                <!-- Добавьте больше развлечений по мере необходимости -->
             </div>
-            <!-- Add more event items as needed -->
-        </div>
-    </section>
+        </section>
+        
+        <section id="events">
+            <h2>События</h2>
+            <div class="event-list">
+                <div class="event-item slide-in">
+                    <div class="event-carousel">
+                        <img src="event1.jpg" alt="День нашей Меги">
+                        <img src="event1_2.jpg" alt="День нашей Меги">
+                        <img src="event1_3.jpg" alt="День нашей Меги">
+                    </div>
+                    <h3>День нашей Меги</h3>
+                    <p>В этот особый день наш ТРЦ предлагает скидки до 50% на все магазины, розыгрыши призов и концерты. Приходите и отпразднуйте с нами! На площади перед ТРЦ будут организованы развлекательные мероприятия для детей и взрослых, а также праздничный салют в конце дня. Не пропустите это грандиозное событие!</p>
+                </div>
+                <div class="event-item slide-in">
+                    <div class="event-carousel">
+                        <img src="event2.jpg" alt="День любви">
+                        <img src="event2_2.jpg" alt="День любви">
+                        <img src="event2_3.jpg" alt="День любви">
+                    </div>
+                    <h3>День любви</h3>
+                    <p>Приглашаем всех влюбленных отпраздновать День любви в нашем ТРЦ. Вас ждут романтические подарки, скидки на парные товары и специальные предложения в ресторанах. Вечером на нашей центральной площади пройдет концерт романтической музыки, а также фотосессии для пар и конкурсы с призами. Сделайте этот день незабываемым!</p>
+                </div>
+                <div class="event-item slide-in">
+                    <div class="event-carousel">
+                        <img src="event3.jpg" alt="День семьи">
+                        <img src="event3_2.jpg" alt="День семьи">
+                        <img src="event3_3.jpg" alt="День семьи">
+                    </div>
+                    <h3>День семьи</h3>
+                    <p>Приводите свою семью на День семьи и наслаждайтесь семейными скидками, конкурсами и развлечениями для детей. У нас есть что-то для каждого члена семьи! На этот день мы подготовили специальные мастер-классы, шоу мыльных пузырей, а также семейные фотозоны и конкурсы. Проведите незабываемый день вместе с семьей!</p>
+                </div>
+                <!-- Добавьте больше событий по мере необходимости -->
+            </div>
+        </section>
+        
+        <section id="parking">
+            <h2>Парковка</h2>
+            <div class="parking-carousel">
+                <img src="parking1.jpg" alt="Парковка">
+                <img src="parking2.jpg" alt="Парковка">
+                <img src="parking3.jpg" alt="Парковка">
+            </div>
+            <p>Наш ТРЦ предлагает просторную парковку для удобства наших посетителей. У нас есть как крытая, так и открытая парковка. Парковка бесплатна для всех гостей на первые два часа. Также у нас имеются места для зарядки электромобилей и специальные места для людей с ограниченными возможностями. Наша парковка оборудована современными системами безопасности и видеонаблюдения.</p>
+        </section>
+        
+        <section id="offers">
+            <h2>Акции</h2>
+            <div class="offers-carousel">
+                <img src="offer1.jpg" alt="Акции">
+                <img src="offer2.jpg" alt="Акции">
+                <img src="offer3.jpg" alt="Акции">
+            </div>
+            <p>В нашем ТРЦ регулярно проходят акции и специальные предложения. Подпишитесь на нашу рассылку, чтобы первыми узнавать о наших акциях и получать эксклюзивные скидки. Также мы предлагаем бонусные программы для наших постоянных клиентов и членов клуба. Получайте бонусы за каждую покупку и обменивайте их на подарочные сертификаты и другие привилегии.</p>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.event-carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true
+                });
+                $('.parking-carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true
+                });
+                $('.offers-carousel').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true
+                });
+            });
+        </script>        
+
+
     
     <section id="contact">
         <h2>Contact Us</h2>
@@ -86,7 +265,7 @@
     </section>
     
     <footer>
-        <p>&copy; 2024 My Mall. All rights reserved.</p>
+        <p>&copy; 2024 Mega Silky Way. All rights reserved.</p>
         <div class="social-media">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
