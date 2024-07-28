@@ -252,201 +252,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Milky Way</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .store-list, .food-list, .entertainment-list, .event-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .store-item, .food-item, .entertainment-item, .event-item {
+            width: 200px;
+            margin: 15px;
+        }
+
+        .store-item img, .food-item img, .entertainment-item img, .event-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .slick-prev, .slick-next {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .small-img {
+            width: 50%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать в ТРЦ Mega Milky Way</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#stores">Магазины</a></li>
-                <li><a href="#food-courts">Фудкорты</a></li>
-                <li><a href="#entertainment">Развлечения</a></li>
-                <li><a href="#events">События</a></li>
-                <li><a href="#parking">Парковка</a></li>
-                <li><a href="#offers">Акции</a></li>
-            </ul>
-        </nav>
+        <h1>MEGA MILKY WAY</h1>
+        <p>Welcome to our shopping mall!</p>
     </header>
-    
+
+    <nav>
+        <a href="#about">ABOUT US</a>
+        <a href="#stores">STORES</a>
+        <a href="#food">FOOD COURTS</a>
+        <a href="#entertainment">ENTERTAINMENT</a>
+        <a href="#events">EVENTS</a>
+        <a href="#parking">PARKING</a>
+        <a href="#offers">OFFERS</a>
+    </nav>
+
     <section id="about">
-        <h2>О нас</h2>
-        <div class="about-content">
-            <p>ТРЦ Mega Milky Way - это уникальное место для шопинга и развлечений. Мы предлагаем широкий выбор магазинов, уютные кафе, разнообразные фудкорты и современные развлекательные зоны для всей семьи. Приходите и откройте для себя новые впечатления!</p>
-            <div class="about-carousel carousel">
-                <div><img src="image2.jpg" alt="Mega Milky Way" class="small-img"></div>
-                <div><img src="image3.jpg" alt="Mega Milky Way" class="small-img"></div>
-                <div><img src="95d37c9db19d3fae42b937d872ab7c09ea8be0b30008a925afe0a5d339e53edb_cropped_size_673_400.jpg" alt="Mega Milky Way" class="small-img"></div>
-            </div>
-        </div>
+        <h2>About Us</h2>
+        <p>Learn more about Mega Milky Way.</p>
+        <img src="megamilkyway.jpg" alt="Mega Milky Way">
     </section>
     
     <section id="stores">
-        <h2>Магазины</h2>
-        <div class="store-list carousel">
+        <h2>Stores</h2>
+        <div class="store-list">
             <div class="store-item">
                 <img src="zara.jpg" alt="Zara">
                 <h3>Zara</h3>
-                <p>Магазин модной одежды для мужчин, женщин и детей. Zara предлагает широкий ассортимент стильной и качественной одежды по доступным ценам.</p>
+                <p>Zara offers the latest trends in clothing for women, men, and kids. Find high-quality fashion at affordable prices.</p>
             </div>
             <div class="store-item">
                 <img src="hm.jpg" alt="H&M">
                 <h3>H&M</h3>
-                <p>Международная сеть магазинов модной одежды и аксессуаров для всей семьи. H&M известен своими современными и доступными коллекциями.</p>
+                <p>H&M provides fashion and quality at the best price in a sustainable way. Discover the latest in clothing and accessories.</p>
             </div>
             <div class="store-item">
                 <img src="lcwaikiki.jpg" alt="LC Waikiki">
                 <h3>LC Waikiki</h3>
-                <p>Турецкий бренд одежды, предлагающий модные и качественные вещи для всей семьи. LC Waikiki славится своим разнообразием и доступностью.</p>
+                <p>LC Waikiki offers affordable fashion for the whole family. Shop the latest styles for men, women, and children.</p>
             </div>
             <div class="store-item">
                 <img src="bershka.jpg" alt="Bershka">
                 <h3>Bershka</h3>
-                <p>Магазин молодежной моды с актуальными трендами и стильными коллекциями. Bershka предлагает одежду, обувь и аксессуары для ярких и активных людей.</p>
+                <p>Bershka is the place to go for young, fresh, and affordable fashion. Discover the latest trends in clothing and accessories.</p>
             </div>
             <div class="store-item">
                 <img src="prada.jpg" alt="Prada">
                 <h3>Prada</h3>
-                <p>Итальянский люксовый бренд, известный своими элегантными и качественными изделиями. Prada предлагает эксклюзивную одежду, обувь и аксессуары.</p>
+                <p>Prada offers luxury fashion, leather goods, footwear, and fragrances. Experience the epitome of Italian elegance.</p>
             </div>
             <div class="store-item">
                 <img src="louisvuitton.jpg" alt="Louis Vuitton">
                 <h3>Louis Vuitton</h3>
-                <p>Французский люксовый бренд, предлагающий сумки, аксессуары и одежду высочайшего качества. Louis Vuitton - символ роскоши и элегантности.</p>
+                <p>Louis Vuitton offers a range of luxury bags, accessories, and ready-to-wear. Discover timeless elegance and craftsmanship.</p>
             </div>
-            <div class="store-item">
-                <img src="goldapple.jpg" alt="Золотое Яблоко">
-                <h3>Золотое Яблоко</h3>
-                <p>Магазин косметики и парфюмерии, предлагающий широкий выбор товаров известных брендов. Золотое Яблоко - это качество и разнообразие.</p>
-            </div>
-            <!-- Add more store items as needed -->
         </div>
     </section>
-    
-    <section id="food-courts">
-        <h2>Фудкорты</h2>
-        <div class="food-list carousel">
+
+    <section id="food">
+        <h2>Food Courts</h2>
+        <div class="food-list">
             <div class="food-item">
                 <img src="galmart.jpg" alt="Galmart">
                 <h3>Galmart</h3>
-                <p>Супермаркет, предлагающий широкий ассортимент продуктов питания и товаров первой необходимости. Galmart - это удобство и качество.</p>
+                <p>Galmart offers a wide range of groceries, fresh produce, and ready-to-eat meals. Convenient shopping for all your needs.</p>
             </div>
             <div class="food-item">
                 <img src="kfc.jpg" alt="KFC">
                 <h3>KFC</h3>
-                <p>Международная сеть ресторанов быстрого питания, известная своими блюдами из курицы. KFC предлагает вкусную еду и быстрое обслуживание.</p>
+                <p>KFC is known for its fried chicken, burgers, and sides. Enjoy delicious fast food with friends and family.</p>
             </div>
             <div class="food-item">
                 <img src="salambro.jpg" alt="Salam Bro">
                 <h3>Salam Bro</h3>
-                <p>Ресторан, предлагающий блюда восточной кухни. Salam Bro - это вкусные и сытные блюда, приготовленные по традиционным рецептам.</p>
+                <p>Salam Bro offers a variety of Middle Eastern cuisine. Enjoy delicious kebabs, falafel, and more.</p>
             </div>
             <div class="food-item">
-                <img src="im.jpg" alt="I'm">
-                <h3>I'm</h3>
-                <p>Кафе, предлагающее свежие и вкусные блюда для любого времени дня. I'm - это уютная атмосфера и разнообразное меню.</p>
-            </div>
-            <div class="food-item">
-                <img src="hardees.jpg" alt="Hardee's">
-                <h3>Hardee's</h3>
-                <p>Ресторан быстрого питания, известный своими бургерами и сэндвичами. Hardee's предлагает качественную еду и быстрое обслуживание.</p>
+                <img src="hardees.jpg" alt="Hardees">
+                <h3>Hardees</h3>
+                <p>Hardees serves up classic American fast food, including burgers, fries, and shakes. Perfect for a quick and tasty meal.</p>
             </div>
             <div class="food-item">
                 <img src="burgerking.jpg" alt="Burger King">
                 <h3>Burger King</h3>
-                <p>Международная сеть ресторанов быстрого питания, предлагающая разнообразные бургеры и другие блюда. Burger King - это вкусная еда и быстрое обслуживание.</p>
+                <p>Burger King offers a range of burgers, fries, and beverages. Enjoy flame-grilled goodness.</p>
             </div>
             <div class="food-item">
                 <img src="bobatea.jpg" alt="Boba Tea">
                 <h3>Boba Tea</h3>
-                <p>Кафе, специализирующееся на напитках с тапиокой. Boba Tea предлагает разнообразные вкусы и оригинальные напитки для всех любителей чая.</p>
+                <p>Boba Tea specializes in tea-based drinks with tapioca pearls. Refresh yourself with a variety of flavors.</p>
             </div>
-            <!-- Add more food items as needed -->
         </div>
     </section>
-    
+
     <section id="entertainment">
-        <h2>Развлечения</h2>
+        <h2>Entertainment</h2>
         <div class="entertainment-list carousel">
             <div class="entertainment-item">
-                <img src="cinema.jpg" alt="Кинотеатр">
-                <h3>Кинотеатр</h3>
-                <p>Наш современный кинотеатр предлагает самые последние новинки киноиндустрии. Удобные кресла и качественный звук создадут неповторимую атмосферу просмотра.</p>
+                <img src="cinema.jpg" alt="Cinema">
+                <h3>Cinema</h3>
+                <p>Our modern cinema shows the latest blockbusters with top-notch sound and picture quality. Enjoy a fantastic movie experience.</p>
             </div>
             <div class="entertainment-item">
-                <img src="bowling.jpg" alt="Боулинг">
-                <h3>Боулинг</h3>
-                <p>Играйте в боулинг с друзьями и семьей в нашем современном боулинг-центре. У нас есть все необходимое оборудование и отличная атмосфера для веселья и азарта!</p>
+                <img src="bowling.jpg" alt="Bowling">
+                <h3>Bowling</h3>
+                <p>Play bowling with friends and family in our state-of-the-art bowling center. Have fun and enjoy the excitement!</p>
             </div>
             <div class="entertainment-item">
-                <img src="playground.jpg" alt="Игровая зона">
-                <h3>Игровая зона</h3>
-                <p>Наши игровые зоны предлагают разнообразные активности для детей всех возрастов. Игровая зона - это место, где дети могут играть и развиваться.</p>
+                <img src="playground.jpg" alt="Playground">
+                <h3>Playground</h3>
+                <p>Our playground offers a variety of activities for kids of all ages. It's a place where children can play and have fun.</p>
             </div>
             <div class="entertainment-item">
-                <img src="vr.jpg" alt="VR зона">
-                <h3>VR зона</h3>
-                <p>Погрузитесь в виртуальную реальность в нашей VR зоне. Мы предлагаем широкий выбор VR игр и аттракционов, которые позволят вам испытать невероятные ощущения и пережить увлекательные приключения. VR зона - это новый уровень развлечений!</p>
+                <img src="vr.jpg" alt="VR Zone">
+                <h3>VR Zone</h3>
+                <p>Immerse yourself in virtual reality in our VR zone. Experience incredible adventures and exciting games.</p>
             </div>
-            <!-- Add more entertainment items as needed -->
         </div>
     </section>
-    
+
     <section id="events">
-        <h2>События</h2>
+        <h2>Events</h2>
         <div class="event-list carousel">
             <div class="event-item">
-                <img src="event1.jpg" alt="День нашей Меги">
-                <h3>День нашей Меги</h3>
-                <p>В этот день мы предлагаем вам уникальные скидки и акции во всех магазинах нашего центра. Примите участие в конкурсах и розыгрышах, а также насладитесь специальными предложениями от наших фудкортов. Этот день станет незабываемым для всей семьи!</p>
+                <img src="event1.jpg" alt="Mega Day">
+                <h3>Mega Day</h3>
+                <p>Join us for Mega Day, a celebration of everything our mall has to offer. Enjoy special discounts, live performances, and more!</p>
             </div>
             <div class="event-item">
-                <img src="event2.jpg" alt="День любви">
-                <h3>День любви</h3>
-                <p>Празднуйте День любви вместе с нами! Мы подготовили для вас романтические сюрпризы, специальные предложения для пар и множество подарков. Насладитесь особой атмосферой и проведите незабываемый день со своим любимым человеком в нашем центре.</p>
+                <img src="event2.jpg" alt="Love Day">
+                <h3>Love Day</h3>
+                <p>Celebrate Love Day with your special someone. Enjoy romantic dinners, exclusive deals, and fun activities for couples.</p>
             </div>
             <div class="event-item">
-                <img src="event3.jpg" alt="День семьи">
-                <h3>День семьи</h3>
-                <p>Приходите всей семьей и наслаждайтесь специальными предложениями для детей и взрослых. Мы предлагаем разнообразные активности и развлечения для всей семьи, а также специальные скидки в магазинах и фудкортах. День семьи - это отличная возможность провести время вместе!</p>
+                <img src="event3.jpg" alt="Family Day">
+                <h3>Family Day</h3>
+                <p>Bring the whole family for a day of fun and entertainment. Enjoy games, activities, and special offers for families.</p>
             </div>
-            <!-- Add more event items as needed -->
         </div>
     </section>
-    
+
     <section id="parking">
-        <h2>Парковка</h2>
-        <img src="parking.jpg" alt="Парковка" class="small-img">
-        <p>Наш торговый центр предлагает удобную и безопасную парковку для всех посетителей. Мы предлагаем множество парковочных мест, включая места для людей с ограниченными возможностями. Парковка оборудована современными системами безопасности и видеонаблюдения.</p>
+        <h2>Parking</h2>
+        <p>Our mall offers ample parking space with convenient access to the main entrance. Parking is free for the first two hours.</p>
+        <img src="parking.jpg" alt="Parking">
     </section>
-    
+
     <section id="offers">
-        <h2>Акции</h2>
-        <img src="offers.jpg" alt="Акции" class="small-img">
-        <p>Следите за нашими специальными предложениями и акциями, чтобы не пропустить выгодные покупки и уникальные скидки. Мы регулярно обновляем информацию об акциях на нашем сайте и в социальных сетях.</p>
+        <h2>Special Offers</h2>
+        <div class="offer-list">
+            <div class="offer-item">
+                <h3>Summer Discounts</h3>
+                <p>Enjoy up to 50% off on selected items during our summer sale. Don't miss out on these great deals!</p>
+            </div>
+            <div class="offer-item">
+                <h3>Member Benefits</h3>
+                <p>Sign up for our loyalty program and enjoy exclusive discounts, early access to sales, and special promotions.</p>
+            </div>
+            <div class="offer-item">
+                <h3>Weekend Specials</h3>
+                <p>Visit us on weekends for special deals and discounts. Every weekend brings new offers and surprises!</p>
+            </div>
+        </div>
+        <img src="offers.jpg" alt="Offers">
     </section>
-    
+
     <footer>
-        <p>© 2024 ТРЦ Mega Milky Way. Все права защищены.</p>
+        <p>&copy; 2024 Mega Milky Way. All rights reserved.</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.carousel').slick({
                 infinite: true,
-                slidesToShow: 3,
+                slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: true,
-                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                nextArrow: '<button type="button" class="slick-next">Next</button>'
+                prevArrow: '<button class="slick-prev">&lt;</button>',
+                nextArrow: '<button class="slick-next">&gt;</button>'
             });
         });
     </script>
 </body>
 </html>
+

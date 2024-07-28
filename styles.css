@@ -243,85 +243,145 @@ form button:hover {
     }
 } */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
 }
 
 header {
-    background-color: #004080;
-    color: white;
-    padding: 20px;
+    background-color: #fff;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 2px solid #ddd;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+header h1 {
     margin: 0;
+    font-size: 32px;
+    color: #002f6c;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
 }
 
-nav ul li a {
-    color: white;
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #002f6c;
+    border-bottom: 2px solid #ddd;
+}
+
+nav a {
+    margin: 0 20px;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 28px;
+    color: #002f6c;
     margin-bottom: 20px;
 }
 
-h2 {
-    color: #004080;
+section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.carousel img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.store-list, .food-list, .entertainment-list, .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .store-item, .food-item, .entertainment-item, .event-item {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
+    width: 200px;
+    margin: 15px;
 }
 
-.store-item img, .food-item img, .entertainment-item img, .event-item img, .about-content img, #parking img, #offers img {
+.store-item img, .food-item img, .entertainment-item img, .event-item img {
     width: 100%;
-    height: auto;
-    max-width: 150px;
-    max-height: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 5px;
-    margin: auto;
+    border-radius: 10px;
 }
 
-footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+.store-item h3, .food-item h3, .entertainment-item h3, .event-item h3 {
+    font-size: 18px;
+    color: #002f6c;
+    margin: 10px 0;
 }
 
-.carousel {
-    width: 80%;
-    margin: auto;
-}
-
-.slick-slide {
-    margin: 0 10px;
+.store-item p, .food-item p, .entertainment-item p, .event-item p {
+    font-size: 14px;
+    color: #666;
 }
 
 .slick-prev, .slick-next {
-    color: #004080;
+    background-color: #002f6c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+footer {
+    background-color: #002f6c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.small-img {
+    width: 50%;
+    height: auto;
 }
 
