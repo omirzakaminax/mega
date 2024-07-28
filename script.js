@@ -1,4 +1,4 @@
-let currentSlide = 0;
+/*let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
 
 function showSlide(index) {
@@ -38,4 +38,15 @@ function validateForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
+});   */
+
+$(document).ready(function(){
+    $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+    });
 });

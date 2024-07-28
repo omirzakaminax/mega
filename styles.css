@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -76,14 +76,16 @@ section {
     animation: fade-in 2s ease-in;
 }
 
-.store-list, .event-list {
+.store-list,
+.event-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
 }
 
-.store-item, .event-item {
+.store-item,
+.event-item {
     max-width: 300px;
     text-align: center;
     opacity: 0;
@@ -102,7 +104,9 @@ footer {
     animation: slide-up 1s ease-in;
 }
 
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
     display: block;
     margin: 0.5em 0;
     padding: 0.5em;
@@ -136,34 +140,61 @@ form button:hover {
 }
 
 /* Animations */
-
+/*
 @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slide-down {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes slide-up {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fade-in-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Media Queries for Responsive Design */
-
+/*
 @media (max-width: 768px) {
     nav ul li {
         display: block;
@@ -174,16 +205,20 @@ form button:hover {
         padding: 10px;
     }
 
-    .store-list, .event-list {
+    .store-list,
+    .event-list {
         flex-direction: column;
         gap: 1em;
     }
 
-    .store-item, .event-item {
+    .store-item,
+    .event-item {
         max-width: 100%;
     }
 
-    form input, form textarea, form button {
+    form input,
+    form textarea,
+    form button {
         max-width: 100%;
     }
 }
@@ -201,7 +236,79 @@ form button:hover {
         padding: 8px;
     }
 
-    form input, form textarea, form button {
+    form input,
+    form textarea,
+    form button {
         padding: 0.4em;
     }
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #004080;
+}
+
+.store-item, .food-item, .entertainment-item, .event-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.store-item img, .food-item img, .entertainment-item img, .event-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.carousel {
+    width: 80%;
+    margin: auto;
+}
+
+.slick-slide {
+    margin: 0 10px;
 }
