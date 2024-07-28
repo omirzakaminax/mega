@@ -254,85 +254,141 @@
     <title>Mega Milky Way</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f4f4f9;
         }
 
         header {
             background-color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
         }
 
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 32px;
+            color: #002f6c;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #555;
         }
 
         nav {
             display: flex;
             justify-content: center;
             padding: 10px 0;
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #ddd;
+            background-color: #002f6c;
+            border-bottom: 2px solid #ddd;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
             font-weight: bold;
+            font-size: 16px;
         }
 
         section {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #002f6c;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
         }
 
         .carousel img {
             width: 100%;
-            max-height: 300px;
+            max-height: 400px;
             object-fit: cover;
+            border-radius: 10px;
         }
 
         .store-list, .food-list, .entertainment-list, .event-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
         }
 
         .store-item, .food-item, .entertainment-item, .event-item {
-            width: 200px;
+            width: 300px;
             margin: 15px;
         }
 
         .store-item img, .food-item img, .entertainment-item img, .event-item img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
             border-radius: 10px;
         }
 
+        .store-item h3, .food-item h3, .entertainment-item h3, .event-item h3 {
+            font-size: 18px;
+            color: #002f6c;
+            margin: 10px 0;
+        }
+
+        .store-item p, .food-item p, .entertainment-item p, .event-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
         .slick-prev, .slick-next {
-            background-color: #333;
+            background-color: #002f6c;
             color: #fff;
             border: none;
             padding: 10px;
             border-radius: 50%;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
         }
 
         footer {
-            background-color: #333;
+            background-color: #002f6c;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
         }
 
         .small-img {
@@ -343,139 +399,80 @@
 </head>
 <body>
     <header>
-        <h1>MEGA MILKY WAY</h1>
-        <p>Welcome to our shopping mall!</p>
+        <h1>Mega Milky Way</h1>
+        <p>Free standard delivery / Gift cards / Shop now</p>
     </header>
-
     <nav>
-        <a href="#about">ABOUT US</a>
-        <a href="#stores">STORES</a>
-        <a href="#food">FOOD COURTS</a>
-        <a href="#entertainment">ENTERTAINMENT</a>
-        <a href="#events">EVENTS</a>
-        <a href="#parking">PARKING</a>
-        <a href="#offers">OFFERS</a>
+        <a href="#entertainments">Entertainments</a>
+        <a href="#clothing">Clothing</a>
+        <a href="#beauty">Beauty</a>
+        <a href="#home">Home</a>
+        <a href="#sport">Sport</a>
+        <a href="#food">Food</a>
+        <a href="#sale">Sale</a>
     </nav>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Learn more about Mega Milky Way.</p>
-        <img src="megamilkyway.jpg" alt="Mega Milky Way">
+        <p>Welcome to Mega Milky Way, your ultimate shopping destination! Explore our wide range of stores, enjoy delicious food, and experience top-notch entertainment.</p>
+        <img src="about.jpg" alt="About Us">
     </section>
-    
+
     <section id="stores">
         <h2>Stores</h2>
         <div class="store-list">
             <div class="store-item">
-                <img src="zara.jpg" alt="Zara">
-                <h3>Zara</h3>
-                <p>Zara offers the latest trends in clothing for women, men, and kids. Find high-quality fashion at affordable prices.</p>
-            </div>
-            <div class="store-item">
-                <img src="hm.jpg" alt="H&M">
-                <h3>H&M</h3>
-                <p>H&M provides fashion and quality at the best price in a sustainable way. Discover the latest in clothing and accessories.</p>
-            </div>
-            <div class="store-item">
-                <img src="lcwaikiki.jpg" alt="LC Waikiki">
-                <h3>LC Waikiki</h3>
-                <p>LC Waikiki offers affordable fashion for the whole family. Shop the latest styles for men, women, and children.</p>
-            </div>
-            <div class="store-item">
-                <img src="bershka.jpg" alt="Bershka">
-                <h3>Bershka</h3>
-                <p>Bershka is the place to go for young, fresh, and affordable fashion. Discover the latest trends in clothing and accessories.</p>
-            </div>
-            <div class="store-item">
-                <img src="prada.jpg" alt="Prada">
+                <div class="carousel">
+                    <img src="prada1.jpg" alt="Prada">
+                    <img src="prada2.jpg" alt="Prada">
+                </div>
                 <h3>Prada</h3>
-                <p>Prada offers luxury fashion, leather goods, footwear, and fragrances. Experience the epitome of Italian elegance.</p>
+                <p>Discover the latest fashion from Prada. Enjoy our luxurious collection and make a style statement.</p>
             </div>
             <div class="store-item">
-                <img src="louisvuitton.jpg" alt="Louis Vuitton">
-                <h3>Louis Vuitton</h3>
-                <p>Louis Vuitton offers a range of luxury bags, accessories, and ready-to-wear. Discover timeless elegance and craftsmanship.</p>
+                <div class="carousel">
+                    <img src="zara1.jpg" alt="Zara">
+                    <img src="zara2.jpg" alt="Zara">
+                </div>
+                <h3>Zara</h3>
+                <p>Trendy and affordable fashion for everyone. Stay stylish with our latest collections.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="food">
-        <h2>Food Courts</h2>
-        <div class="food-list">
-            <div class="food-item">
-                <img src="galmart.jpg" alt="Galmart">
-                <h3>Galmart</h3>
-                <p>Galmart offers a wide range of groceries, fresh produce, and ready-to-eat meals. Convenient shopping for all your needs.</p>
+            <div class="store-item">
+                <div class="carousel">
+                    <img src="lcwaikiki1.jpg" alt="LC Waikiki">
+                    <img src="lcwaikiki2.jpg" alt="LC Waikiki">
+                </div>
+                <h3>LC Waikiki</h3>
+                <p>Affordable fashion for the whole family. Discover our wide range of stylish clothes.</p>
             </div>
-            <div class="food-item">
-                <img src="kfc.jpg" alt="KFC">
-                <h3>KFC</h3>
-                <p>KFC is known for its fried chicken, burgers, and sides. Enjoy delicious fast food with friends and family.</p>
-            </div>
-            <div class="food-item">
-                <img src="salambro.jpg" alt="Salam Bro">
-                <h3>Salam Bro</h3>
-                <p>Salam Bro offers a variety of Middle Eastern cuisine. Enjoy delicious kebabs, falafel, and more.</p>
-            </div>
-            <div class="food-item">
-                <img src="hardees.jpg" alt="Hardees">
-                <h3>Hardees</h3>
-                <p>Hardees serves up classic American fast food, including burgers, fries, and shakes. Perfect for a quick and tasty meal.</p>
-            </div>
-            <div class="food-item">
-                <img src="burgerking.jpg" alt="Burger King">
-                <h3>Burger King</h3>
-                <p>Burger King offers a range of burgers, fries, and beverages. Enjoy flame-grilled goodness.</p>
-            </div>
-            <div class="food-item">
-                <img src="bobatea.jpg" alt="Boba Tea">
-                <h3>Boba Tea</h3>
-                <p>Boba Tea specializes in tea-based drinks with tapioca pearls. Refresh yourself with a variety of flavors.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="entertainment">
-        <h2>Entertainment</h2>
-        <div class="entertainment-list carousel">
-            <div class="entertainment-item">
-                <img src="cinema.jpg" alt="Cinema">
-                <h3>Cinema</h3>
-                <p>Our modern cinema shows the latest blockbusters with top-notch sound and picture quality. Enjoy a fantastic movie experience.</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="bowling.jpg" alt="Bowling">
-                <h3>Bowling</h3>
-                <p>Play bowling with friends and family in our state-of-the-art bowling center. Have fun and enjoy the excitement!</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="playground.jpg" alt="Playground">
-                <h3>Playground</h3>
-                <p>Our playground offers a variety of activities for kids of all ages. It's a place where children can play and have fun.</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="vr.jpg" alt="VR Zone">
-                <h3>VR Zone</h3>
-                <p>Immerse yourself in virtual reality in our VR zone. Experience incredible adventures and exciting games.</p>
-            </div>
+            <!-- Add more store items as needed -->
         </div>
     </section>
 
     <section id="events">
         <h2>Events</h2>
-        <div class="event-list carousel">
+        <div class="event-list">
             <div class="event-item">
-                <img src="event1.jpg" alt="Mega Day">
+                <div class="carousel">
+                    <img src="event1.jpg" alt="Mega Day">
+                    <img src="event2.jpg" alt="Mega Day">
+                </div>
                 <h3>Mega Day</h3>
                 <p>Join us for Mega Day, a celebration of everything our mall has to offer. Enjoy special discounts, live performances, and more!</p>
             </div>
             <div class="event-item">
-                <img src="event2.jpg" alt="Love Day">
+                <div class="carousel">
+                    <img src="event3.jpg" alt="Love Day">
+                    <img src="event4.jpg" alt="Love Day">
+                </div>
                 <h3>Love Day</h3>
                 <p>Celebrate Love Day with your special someone. Enjoy romantic dinners, exclusive deals, and fun activities for couples.</p>
             </div>
             <div class="event-item">
-                <img src="event3.jpg" alt="Family Day">
+                <div class="carousel">
+                    <img src="event5.jpg" alt="Family Day">
+                    <img src="event6.jpg" alt="Family Day">
+                </div>
                 <h3>Family Day</h3>
                 <p>Bring the whole family for a day of fun and entertainment. Enjoy games, activities, and special offers for families.</p>
             </div>
@@ -501,29 +498,29 @@
             </div>
             <div class="offer-item">
                 <h3>Weekend Specials</h3>
-                <p>Visit us on weekends for special deals and discounts. Every weekend brings new offers and surprises!</p>
+                <p>Visit us on weekends for special deals and discounts. Every weekend brings something new!</p>
             </div>
         </div>
-        <img src="offers.jpg" alt="Offers">
     </section>
 
     <footer>
         <p>&copy; 2024 Mega Milky Way. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.carousel').slick({
+                dots: true,
                 infinite: true,
+                speed: 300,
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                prevArrow: '<button class="slick-prev">&lt;</button>',
-                nextArrow: '<button class="slick-next">&gt;</button>'
+                adaptiveHeight: true,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
             });
         });
     </script>
 </body>
 </html>
-
