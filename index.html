@@ -296,6 +296,7 @@
         .carousel img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
         }
         .carousel .store-description {
             padding: 10px;
@@ -330,6 +331,12 @@
                 flex-basis: 100%;
             }
         }
+        @media (min-width: 769px) {
+            .carousel img {
+                max-width: 50%;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -352,6 +359,13 @@
 <section id="about">
     <h2>About Us</h2>
     <p>Mega Milky Way is your one-stop destination for all your shopping, dining, and entertainment needs. Our mall offers a wide range of stores, food courts, and entertainment options to make your visit memorable. Enjoy shopping with us!</p>
+    <div class="carousel">
+        <div><img src="mall1.jpg" alt="Mall View 1"></div>
+        <div><img src="mall2.jpg" alt="Mall View 2"></div>
+        <div><img src="mall3.jpg" alt="Mall View 3"></div>
+        <div><img src="mall4.jpg" alt="Mall View 4"></div>
+        <div><img src="mall5.jpg" alt="Mall View 5"></div>
+    </div>
 </section>
 
 <section id="entertainments">
@@ -471,7 +485,7 @@
             <img src="clinique.jpg" alt="Clinique">
             <div class="store-description">
                 <h3>Clinique</h3>
-                <p>Clinique offers dermatologist-developed skincare and makeup products that are allergy tested and fragrance-free.</p>
+                <p>Clinique offers dermatologist-developed skincare and makeup products for all skin types.</p>
             </div>
         </div>
     </div>
@@ -481,14 +495,7 @@
     <h2>Home</h2>
     <div class="carousel">
         <div>
-            <img src="zarahome.jpg" alt="Zara Home">
-            <div class="store-description">
-                <h3>Zara Home</h3>
-                <p>Discover stylish and functional home decor items at Zara Home. From furniture to accessories, find everything you need to beautify your home.</p>
-            </div>
-        </div>
-        <div>
-            <img src="lcwaikikihome.jpg" alt="LC Waikiki Home">
+            <img src="waikikihome.jpg" alt="LC Waikiki Home">
             <div class="store-description">
                 <h3>LC Waikiki Home</h3>
                 <p>LC Waikiki Home offers a wide range of home decor items, including bedding, curtains, and more.</p>
@@ -504,8 +511,8 @@
         <div>
             <img src="hommart.jpg" alt="Home Mart">
             <div class="store-description">
-                <h3>Home Mart</h3>
-                <p>Home Mart provides a wide range of home improvement and decor products to make your home more comfortable and beautiful.</p>
+                <h3>Home essentials</h3>
+                <p>Home essentials provides a wide range of home improvement and decor products to make your home more comfortable and beautiful.</p>
             </div>
         </div>
         <div>
