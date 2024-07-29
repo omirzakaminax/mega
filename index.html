@@ -252,201 +252,422 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Milky Way</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            flex: 1;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel .store-description {
+            padding: 10px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .slick-prev, .slick-next {
+            background-color: #000;
+            color: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px;
+                flex-basis: 50%;
+            }
+            footer {
+                position: static;
+            }
+        }
+        @media (max-width: 480px) {
+            nav a {
+                padding: 8px;
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать в ТРЦ Mega Milky Way</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#stores">Магазины</a></li>
-                <li><a href="#food-courts">Фудкорты</a></li>
-                <li><a href="#entertainment">Развлечения</a></li>
-                <li><a href="#events">События</a></li>
-                <li><a href="#parking">Парковка</a></li>
-                <li><a href="#offers">Акции</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>О нас</h2>
-        <div class="about-content">
-            <p>ТРЦ Mega Milky Way - это уникальное место для шопинга и развлечений. Мы предлагаем широкий выбор магазинов, уютные кафе, разнообразные фудкорты и современные развлекательные зоны для всей семьи. Приходите и откройте для себя новые впечатления!</p>
-            <div class="about-carousel carousel">
-                <div><img src="image2.jpg" alt="Mega Milky Way" class="small-img"></div>
-                <div><img src="image3.jpg" alt="Mega Milky Way" class="small-img"></div>
-                <div><img src="95d37c9db19d3fae42b937d872ab7c09ea8be0b30008a925afe0a5d339e53edb_cropped_size_673_400.jpg" alt="Mega Milky Way" class="small-img"></div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="stores">
-        <h2>Магазины</h2>
-        <div class="store-list carousel">
-            <div class="store-item">
-                <img src="zara.jpg" alt="Zara">
-                <h3>Zara</h3>
-                <p>Магазин модной одежды для мужчин, женщин и детей. Zara предлагает широкий ассортимент стильной и качественной одежды по доступным ценам.</p>
-            </div>
-            <div class="store-item">
-                <img src="hm.jpg" alt="H&M">
-                <h3>H&M</h3>
-                <p>Международная сеть магазинов модной одежды и аксессуаров для всей семьи. H&M известен своими современными и доступными коллекциями.</p>
-            </div>
-            <div class="store-item">
-                <img src="lcwaikiki.jpg" alt="LC Waikiki">
-                <h3>LC Waikiki</h3>
-                <p>Турецкий бренд одежды, предлагающий модные и качественные вещи для всей семьи. LC Waikiki славится своим разнообразием и доступностью.</p>
-            </div>
-            <div class="store-item">
-                <img src="bershka.jpg" alt="Bershka">
-                <h3>Bershka</h3>
-                <p>Магазин молодежной моды с актуальными трендами и стильными коллекциями. Bershka предлагает одежду, обувь и аксессуары для ярких и активных людей.</p>
-            </div>
-            <div class="store-item">
-                <img src="prada.jpg" alt="Prada">
-                <h3>Prada</h3>
-                <p>Итальянский люксовый бренд, известный своими элегантными и качественными изделиями. Prada предлагает эксклюзивную одежду, обувь и аксессуары.</p>
-            </div>
-            <div class="store-item">
-                <img src="louisvuitton.jpg" alt="Louis Vuitton">
-                <h3>Louis Vuitton</h3>
-                <p>Французский люксовый бренд, предлагающий сумки, аксессуары и одежду высочайшего качества. Louis Vuitton - символ роскоши и элегантности.</p>
-            </div>
-            <div class="store-item">
-                <img src="goldapple.jpg" alt="Золотое Яблоко">
-                <h3>Золотое Яблоко</h3>
-                <p>Магазин косметики и парфюмерии, предлагающий широкий выбор товаров известных брендов. Золотое Яблоко - это качество и разнообразие.</p>
-            </div>
-            <!-- Add more store items as needed -->
-        </div>
-    </section>
-    
-    <section id="food-courts">
-        <h2>Фудкорты</h2>
-        <div class="food-list carousel">
-            <div class="food-item">
-                <img src="galmart.jpg" alt="Galmart">
-                <h3>Galmart</h3>
-                <p>Супермаркет, предлагающий широкий ассортимент продуктов питания и товаров первой необходимости. Galmart - это удобство и качество.</p>
-            </div>
-            <div class="food-item">
-                <img src="kfc.jpg" alt="KFC">
-                <h3>KFC</h3>
-                <p>Международная сеть ресторанов быстрого питания, известная своими блюдами из курицы. KFC предлагает вкусную еду и быстрое обслуживание.</p>
-            </div>
-            <div class="food-item">
-                <img src="salambro.jpg" alt="Salam Bro">
-                <h3>Salam Bro</h3>
-                <p>Ресторан, предлагающий блюда восточной кухни. Salam Bro - это вкусные и сытные блюда, приготовленные по традиционным рецептам.</p>
-            </div>
-            <div class="food-item">
-                <img src="im.jpg" alt="I'm">
-                <h3>I'm</h3>
-                <p>Кафе, предлагающее свежие и вкусные блюда для любого времени дня. I'm - это уютная атмосфера и разнообразное меню.</p>
-            </div>
-            <div class="food-item">
-                <img src="hardees.jpg" alt="Hardee's">
-                <h3>Hardee's</h3>
-                <p>Ресторан быстрого питания, известный своими бургерами и сэндвичами. Hardee's предлагает качественную еду и быстрое обслуживание.</p>
-            </div>
-            <div class="food-item">
-                <img src="burgerking.jpg" alt="Burger King">
-                <h3>Burger King</h3>
-                <p>Международная сеть ресторанов быстрого питания, предлагающая разнообразные бургеры и другие блюда. Burger King - это вкусная еда и быстрое обслуживание.</p>
-            </div>
-            <div class="food-item">
-                <img src="bobatea.jpg" alt="Boba Tea">
-                <h3>Boba Tea</h3>
-                <p>Кафе, специализирующееся на напитках с тапиокой. Boba Tea предлагает разнообразные вкусы и оригинальные напитки для всех любителей чая.</p>
-            </div>
-            <!-- Add more food items as needed -->
-        </div>
-    </section>
-    
-    <section id="entertainment">
-        <h2>Развлечения</h2>
-        <div class="entertainment-list carousel">
-            <div class="entertainment-item">
-                <img src="cinema.jpg" alt="Кинотеатр">
-                <h3>Кинотеатр</h3>
-                <p>Наш современный кинотеатр предлагает самые последние новинки киноиндустрии. Удобные кресла и качественный звук создадут неповторимую атмосферу просмотра.</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="bowling.jpg" alt="Боулинг">
-                <h3>Боулинг</h3>
-                <p>Играйте в боулинг с друзьями и семьей в нашем современном боулинг-центре. У нас есть все необходимое оборудование и отличная атмосфера для веселья и азарта!</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="playground.jpg" alt="Игровая зона">
-                <h3>Игровая зона</h3>
-                <p>Наши игровые зоны предлагают разнообразные активности для детей всех возрастов. Игровая зона - это место, где дети могут играть и развиваться.</p>
-            </div>
-            <div class="entertainment-item">
-                <img src="vr.jpg" alt="VR зона">
-                <h3>VR зона</h3>
-                <p>Погрузитесь в виртуальную реальность в нашей VR зоне. Мы предлагаем широкий выбор VR игр и аттракционов, которые позволят вам испытать невероятные ощущения и пережить увлекательные приключения. VR зона - это новый уровень развлечений!</p>
-            </div>
-            <!-- Add more entertainment items as needed -->
-        </div>
-    </section>
-    
-    <section id="events">
-        <h2>События</h2>
-        <div class="event-list carousel">
-            <div class="event-item">
-                <img src="event1.jpg" alt="День нашей Меги">
-                <h3>День нашей Меги</h3>
-                <p>В этот день мы предлагаем вам уникальные скидки и акции во всех магазинах нашего центра. Примите участие в конкурсах и розыгрышах, а также насладитесь специальными предложениями от наших фудкортов. Этот день станет незабываемым для всей семьи!</p>
-            </div>
-            <div class="event-item">
-                <img src="event2.jpg" alt="День любви">
-                <h3>День любви</h3>
-                <p>Празднуйте День любви вместе с нами! Мы подготовили для вас романтические сюрпризы, специальные предложения для пар и множество подарков. Насладитесь особой атмосферой и проведите незабываемый день со своим любимым человеком в нашем центре.</p>
-            </div>
-            <div class="event-item">
-                <img src="event3.jpg" alt="День семьи">
-                <h3>День семьи</h3>
-                <p>Приходите всей семьей и наслаждайтесь специальными предложениями для детей и взрослых. Мы предлагаем разнообразные активности и развлечения для всей семьи, а также специальные скидки в магазинах и фудкортах. День семьи - это отличная возможность провести время вместе!</p>
-            </div>
-            <!-- Add more event items as needed -->
-        </div>
-    </section>
-    
-    <section id="parking">
-        <h2>Парковка</h2>
-        <img src="parking.jpg" alt="Парковка" class="small-img">
-        <p>Наш торговый центр предлагает удобную и безопасную парковку для всех посетителей. Мы предлагаем множество парковочных мест, включая места для людей с ограниченными возможностями. Парковка оборудована современными системами безопасности и видеонаблюдения.</p>
-    </section>
-    
-    <section id="offers">
-        <h2>Акции</h2>
-        <img src="offers.jpg" alt="Акции" class="small-img">
-        <p>Следите за нашими специальными предложениями и акциями, чтобы не пропустить выгодные покупки и уникальные скидки. Мы регулярно обновляем информацию об акциях на нашем сайте и в социальных сетях.</p>
-    </section>
-    
-    <footer>
-        <p>© 2024 ТРЦ Mega Milky Way. Все права защищены.</p>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                dots: true,
-                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                nextArrow: '<button type="button" class="slick-next">Next</button>'
-            });
+<header>
+    <h1>Mega Milky Way</h1>
+    <p>Welcome to our shopping mall!</p>
+</header>
+
+<nav>
+    <a href="#entertainments">Entertainments</a>
+    <a href="#clothing">Clothing</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#home">Home</a>
+    <a href="#sport">Sport</a>
+    <a href="#food">Food</a>
+    <a href="#sale">Sale</a>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Mega Milky Way is your one-stop destination for all your shopping, dining, and entertainment needs. Our mall offers a wide range of stores, food courts, and entertainment options to make your visit memorable. Enjoy shopping with us!</p>
+</section>
+
+<section id="entertainments">
+    <h2>Entertainments</h2>
+    <div class="carousel">
+        <div>
+            <img src="cinema.jpg" alt="Cinema">
+            <div class="store-description">
+                <h3>Cinema</h3>
+                <p>Enjoy the latest movies in our state-of-the-art cinema with comfortable seating and excellent sound quality.</p>
+            </div>
+        </div>
+        <div>
+            <img src="bowling.jpg" alt="Bowling">
+            <div class="store-description">
+                <h3>Bowling</h3>
+                <p>Have fun with friends and family at our modern bowling alley, featuring multiple lanes and a lively atmosphere.</p>
+            </div>
+        </div>
+        <div>
+            <img src="trampoline.jpg" alt="Trampoline Park">
+            <div class="store-description">
+                <h3>Trampoline Park</h3>
+                <p>Jump and bounce to your heart's content in our exciting trampoline park, perfect for kids and adults alike.</p>
+            </div>
+        </div>
+        <div>
+            <img src="vrzone.jpg" alt="VR Zone">
+            <div class="store-description">
+                <h3>VR Zone</h3>
+                <p>Experience cutting-edge virtual reality games and adventures in our immersive VR Zone.</p>
+            </div>
+        </div>
+        <div>
+            <img src="playground.jpg" alt="Playground">
+            <div class="store-description">
+                <h3>Playground</h3>
+                <p>Let your kids have a great time at our safe and fun-filled playground, equipped with various play structures.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="clothing">
+    <h2>Clothing</h2>
+    <div class="carousel">
+        <div>
+            <img src="prada1.jpg" alt="Prada">
+            <div class="store-description">
+                <h3>Prada</h3>
+                <p>Explore the latest collections from Prada. Known for luxury and sophisticated designs, Prada offers a wide range of clothing and accessories.</p>
+            </div>
+        </div>
+        <div>
+            <img src="zara1.jpg" alt="Zara">
+            <div class="store-description">
+                <h3>Zara</h3>
+                <p>Zara offers the latest fashion trends for men, women, and kids. Discover stylish clothing, shoes, and accessories at affordable prices.</p>
+            </div>
+        </div>
+        <div>
+            <img src="lcwaikiki1.jpg" alt="LC Waikiki">
+            <div class="store-description">
+                <h3>LC Waikiki</h3>
+                <p>LC Waikiki brings you fashionable and comfortable clothing for the entire family. Shop the latest collections and enjoy great deals.</p>
+            </div>
+        </div>
+        <div>
+            <img src="hm.jpg" alt="H&M">
+            <div class="store-description">
+                <h3>H&M</h3>
+                <p>Find trendy and affordable clothing, shoes, and accessories for all ages at H&M.</p>
+            </div>
+        </div>
+        <div>
+            <img src="bershka.jpg" alt="Bershka">
+            <div class="store-description">
+                <h3>Bershka</h3>
+                <p>Bershka offers stylish and modern clothing for young people who love to stay ahead of the fashion curve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="beauty">
+    <h2>Beauty</h2>
+    <div class="carousel">
+        <div>
+            <img src="sephora.jpg" alt="Sephora">
+            <div class="store-description">
+                <h3>Sephora</h3>
+                <p>Discover a wide range of beauty products from top brands at Sephora, including makeup, skincare, and fragrances.</p>
+            </div>
+        </div>
+        <div>
+            <img src="mac.jpg" alt="MAC">
+            <div class="store-description">
+                <h3>MAC</h3>
+                <p>MAC offers professional quality makeup, including foundation, lipstick, eyeshadow, and more.</p>
+            </div>
+        </div>
+        <div>
+            <img src="chanel.jpg" alt="Chanel">
+            <div class="store-description">
+                <h3>Chanel</h3>
+                <p>Experience luxury beauty products from Chanel, including makeup, skincare, and fragrances.</p>
+            </div>
+        </div>
+        <div>
+            <img src="dior.jpg" alt="Dior">
+            <div class="store-description">
+                <h3>Dior</h3>
+                <p>Find high-end beauty products from Dior, including makeup, skincare, and perfumes.</p>
+            </div>
+        </div>
+        <div>
+            <img src="clinique.jpg" alt="Clinique">
+            <div class="store-description">
+                <h3>Clinique</h3>
+                <p>Clinique offers dermatologist-developed skincare and makeup products that are allergy tested and fragrance-free.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home">
+    <h2>Home</h2>
+    <div class="carousel">
+        <div>
+            <img src="zarahome.jpg" alt="Zara Home">
+            <div class="store-description">
+                <h3>Zara Home</h3>
+                <p>Discover stylish and functional home decor items at Zara Home. From furniture to accessories, find everything you need to beautify your home.</p>
+            </div>
+        </div>
+        <div>
+            <img src="lcwaikikihome.jpg" alt="LC Waikiki Home">
+            <div class="store-description">
+                <h3>LC Waikiki Home</h3>
+                <p>LC Waikiki Home offers a wide range of home decor items, including bedding, curtains, and more.</p>
+            </div>
+        </div>
+        <div>
+            <img src="ikea.jpg" alt="IKEA">
+            <div class="store-description">
+                <h3>IKEA</h3>
+                <p>IKEA offers affordable and stylish furniture, home decor, and accessories for every room in your home.</p>
+            </div>
+        </div>
+        <div>
+            <img src="hommart.jpg" alt="Home Mart">
+            <div class="store-description">
+                <h3>Home Mart</h3>
+                <p>Home Mart provides a wide range of home improvement and decor products to make your home more comfortable and beautiful.</p>
+            </div>
+        </div>
+        <div>
+            <img src="potterybarn.jpg" alt="Pottery Barn">
+            <div class="store-description">
+                <h3>Pottery Barn</h3>
+                <p>Find elegant and high-quality home furnishings and decor at Pottery Barn, perfect for every room in your house.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sport">
+    <h2>Sport</h2>
+    <div class="carousel">
+        <div>
+            <img src="decathlon.jpg" alt="Decathlon">
+            <div class="store-description">
+                <h3>Decathlon</h3>
+                <p>Decathlon offers a wide range of sporting goods and equipment for all sports and fitness activities at affordable prices.</p>
+            </div>
+        </div>
+        <div>
+            <img src="nike.jpg" alt="Nike">
+            <div class="store-description">
+                <h3>Nike</h3>
+                <p>Nike provides high-quality sportswear, footwear, and accessories for all your athletic needs.</p>
+            </div>
+        </div>
+        <div>
+            <img src="adidas.jpg" alt="Adidas">
+            <div class="store-description">
+                <h3>Adidas</h3>
+                <p>Adidas offers a variety of sportswear, shoes, and accessories to help you perform at your best.</p>
+            </div>
+        </div>
+        <div>
+            <img src="puma.jpg" alt="Puma">
+            <div class="store-description">
+                <h3>Puma</h3>
+                <p>Puma provides stylish and functional sportswear, shoes, and accessories for all your athletic pursuits.</p>
+            </div>
+        </div>
+        <div>
+            <img src="reebok.jpg" alt="Reebok">
+            <div class="store-description">
+                <h3>Reebok</h3>
+                <p>Find high-performance sportswear, footwear, and accessories at Reebok, designed for fitness enthusiasts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="food">
+    <h2>Food</h2>
+    <div class="carousel">
+        <div>
+            <img src="burgerking.jpg" alt="Burger King">
+            <div class="store-description">
+                <h3>Burger King</h3>
+                <p>Enjoy delicious burgers, fries, and more at Burger King. A perfect place for fast food lovers.</p>
+            </div>
+        </div>
+        <div>
+            <img src="kfc.jpg" alt="KFC">
+            <div class="store-description">
+                <h3>KFC</h3>
+                <p>Savor the taste of crispy fried chicken and sides at KFC. Great food at great prices.</p>
+            </div>
+        </div>
+        <div>
+            <img src="mcdonalds.jpg" alt="McDonald's">
+            <div class="store-description">
+                <h3>McDonald's</h3>
+                <p>McDonald's offers a variety of fast food options, including burgers, fries, and beverages.</p>
+            </div>
+        </div>
+        <div>
+            <img src="sushitime.jpg" alt="Sushi Time">
+            <div class="store-description">
+                <h3>Sushi Time</h3>
+                <p>Enjoy fresh and delicious sushi, sashimi, and other Japanese dishes at Sushi Time.</p>
+            </div>
+        </div>
+        <div>
+            <img src="bobatea.jpg" alt="Boba Tea">
+            <div class="store-description">
+                <h3>Boba Tea</h3>
+                <p>Refresh yourself with a variety of bubble tea flavors at Boba Tea. A sweet treat for all ages.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sale">
+    <h2>Sale</h2>
+    <div class="carousel">
+        <div>
+            <img src="sale1.jpg" alt="Sale">
+            <div class="store-description">
+                <h3>End of Season Sale</h3>
+                <p>Don't miss out on our end of season sale with up to 70% off on selected items!</p>
+            </div>
+        </div>
+        <div>
+            <img src="sale2.jpg" alt="Sale">
+            <div class="store-description">
+                <h3>Black Friday Deals</h3>
+                <p>Get amazing discounts on Black Friday! Shop early to grab the best deals on electronics, clothing, and more.</p>
+            </div>
+        </div>
+        <div>
+            <img src="sale3.jpg" alt="Sale">
+            <div class="store-description">
+                <h3>Holiday Sales</h3>
+                <p>Enjoy holiday sales with special discounts on a wide range of products. Perfect time for gift shopping!</p>
+            </div>
+        </div>
+        <div>
+            <img src="sale4.jpg" alt="Sale">
+            <div class="store-description">
+                <h3>Clearance Sale</h3>
+                <p>Find unbeatable prices during our clearance sale. Limited stock available, so hurry!</p>
+            </div>
+        </div>
+        <div>
+            <img src="sale5.jpg" alt="Sale">
+            <div class="store-description">
+                <h3>Flash Sales</h3>
+                <p>Stay tuned for our flash sales and enjoy huge discounts for a limited time only!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Mega Milky Way. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
+            nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
         });
-    </script>
+        
+        $('nav a').on('click', function(event) {
+            event.preventDefault();
+            var target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+        });
+    });
+</script>
+
 </body>
 </html>
